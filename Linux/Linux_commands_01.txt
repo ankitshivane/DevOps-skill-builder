@@ -30,4 +30,18 @@ ls command
 	options
 		-l : list the content in long list format where details are present in alphabetical order file or directory name
 		-r : gives content in reverse or recursive order of file or directory name
-		
+		-i : it prints the inode number of each file
+	
+du -h : this command will give information of how much space is consumed by each directory including hidden ones present under current directory.
+
+--------
+
+File management
+1. Cat
+
+we cat utility we can create a new file, add content to the existing file and also we can view the content of the existing file.
+but we can not modify the content of existing file using cat utility.
+
+cat > fileName ::: it will create a new file everytime and if you are providing a existing file name then it will override the existing content with new content.
+
+for saving press ctrl + d and to cancel press ctrl + C but it will create a file till current content even if you have press ctrl + c.
