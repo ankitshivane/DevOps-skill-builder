@@ -1,0 +1,33 @@
+date: 22/07/2024 (Day-01)
+Linux and Shell scripting
+
+
+hitesh sir repo
+
+https://github.com/hkshitesh/GFG-BATCH-25
+
+
+command practice
+man
+help
+info
+cd
+pwd
+rm	
+	options 
+	rm : generally we use rm command to delete files but if it is used with -rf option then it will delete folders also without asking or giving any error. it will delete forecefully and recursive manner, it will delete the directory including sub directory also
+	-i : it will prompt before every removal for confirmation as y or n if you give y then only it will delete else it will terminate.
+
+rmdir : it removes empty directory
+	options:
+	-p : it helps to remove directory and its sub-directory for example the p4 directory contain p5 so to remove p4 and p5 use below cmd: rmdir -p p4/p5/ 
+	here it will delete non empty directory with this command if the directory is empty then it will not delete it and throw an error that the directory is non empty
+	-v : its a verbose means it will show each and every step of execution
+	
+tree (sudo yum install tree -y)
+mkdir with -p option
+ls command
+	options
+		-l : list the content in long list format where details are present in alphabetical order file or directory name
+		-r : gives content in reverse or recursive order of file or directory name
+		
