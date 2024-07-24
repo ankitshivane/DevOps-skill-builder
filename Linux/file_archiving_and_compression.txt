@@ -1,0 +1,36 @@
+file archiving and compression in linux
+
+Archiving and compressing files are common operations in the Unix world, done by system administrators on a very regular basis.
+
+Luckily for you, Linux exposes a set of different commands in order to archive, compress, uncompress and extract files from an archive.
+
+A. Archive files on Linux using tar
+Tar is a very popular command among system administrators.the tar command does not compress .tar files. tar just bundles up
+the files into a single archived file. Therefore, if you ever see a file ending in just ‘.tar’, you already know that
+the archive process applied no compression on the files contained within that archive.
+
+The tar command has a few more options than the zip command did. The most commonly used options for the tar command
+includes the following:
+
+-c: creates a new .tar archive file
+-v: verbosely shows the tar process so you can see all the steps in the process
+-f: specifies the file name type of the archive file
+-x: extracts files from an existing .tar file
+-t: --list, it will list the contents of an archive
+
+a.
+The following example shows the basic syntax of the tar command to create an archive:
+$ tar -cvf <name of archive file>.tar <directory to archive or files to archive>
+
+tar -cvf archive.tar file1 file2 file3
+
+b. list the content of archive file using -t:
+
+[ec2-user@ip-172-31-15-192 p2]$ tar -tvf archive.tar
+-rw-r--r-- ec2-user/ec2-user 19559749 2024-07-24 09:53 file3
+-rw-r--r-- ec2-user/ec2-user 19559749 2024-07-24 09:55 file4
+-rw-r--r-- ec2-user/ec2-user 19559749 2024-07-24 09:55 file5
+
+c. extract the content of the file using -x
+
+Note: if you do not use -f option in all above command then it will thorw us an error and it wont be able to guess the archive file name.

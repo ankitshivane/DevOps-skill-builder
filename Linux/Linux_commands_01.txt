@@ -45,3 +45,61 @@ but we can not modify the content of existing file using cat utility.
 cat > fileName ::: it will create a new file everytime and if you are providing a existing file name then it will override the existing content with new content.
 
 for saving press ctrl + d and to cancel press ctrl + C but it will create a file till current content even if you have press ctrl + c.
+
+
+2. more and less command
+more command : more is one of the oldest terminal pagers in the UNIX ecosystem. Originally, more could only scroll down  but now we can use it to scroll up one screen-full at a time, and scroll down either one line or one screen-full
+less command : using less command we can toggle the content of the screen in both the directions
+
+3. cp command:
+it is use to copy the files from source to destination place
+
+option
+	i : using this we can mention that whether we need to overrite the file present in the destination or not? it will ask us for confirmation using y or n 
+	cp -i sourceFile destinationFile
+	
+4. head and tail command
+by default head command show us the first 10 lines of the file whereas the tail command show us the last 10 lines of the file
+but there is one option available as -n using which we can specify the number of lines to view.
+
+5. Hard link and soft link in linux
+
+	a. Hard Links: command to create-> ln originalFileName hardLinkFileName
+	2. hard link will create ordinary file.  
+ 
+3. Hard link will have same i-node number, time stamp, file 
+permission and size like original file 
+  
+4. Hard link can be created on local file system i.e on local 
+partition.  
+ 
+5. If original file is deleted,hard link will remain active.  
+ 
+6. Once hard link is created it will increase Link count of 
+original file and hard link.  
+ 
+7. Hard link can be observed using command  
+#ls -li 
+
+	b. Soft Link or Symlink or Symbolic link 
+ 
+ 
+1.    Command :  
+# ln–s  <Orig file Name>  <Link name>  
+NOTE: here note is the link_name should be specified with the complete absolute path starting from root folder otherwise soft link wont be created properly. 
+ 
+2. Soft link will create new shortcut.  
+ 
+3. Soft link will have different i-node number, time 
+stamp, file permission and size.  
+ 
+4. Soft link can be created across different partitions.  
+ 
+5. If original file is deleted, renamed or moved than /softlinkis of no use. but if you create a file with the same name as the original deleted file then the soft link will start working. 
+ 
+6. Softlink does not increases link count but it will 
+show the name of original file with arrow sign and also indicate “l” as file type before file permissions.  
+
+
+7. Soft link can be observed using command  
+# ls –li 
