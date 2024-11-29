@@ -1,0 +1,39 @@
+Installing Docker to use with the AWS SAM CLI
+
+steps:
+
+Installing Docker
+
+1. Update the installed packages and package cache on your instance.
+
+
+$ sudo yum update -y
+Install the most recent Docker Community Edition package.
+
+For Amazon Linux 2, run the following:
+
+$ sudo amazon-linux-extras install docker
+For Amazon Linux 2023, run the following:
+
+OR
+
+$ sudo yum install -y docker
+Start the Docker service.
+
+
+$ sudo service docker start
+Add the ec2-user to the docker group so that you can run Docker commands without using sudo.
+
+
+$ sudo usermod -a -G docker ec2-user
+
+Configure Docker to start on boot with systemd
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
+Pick up the new docker group permissions by logging out and logging back in again. To do this, close your current SSH terminal window and reconnect to your instance in a new one. Your new SSH session should have the appropriate docker group permissions.
+
+Verify that the ec2-user can run Docker commands without using sudo.
+
+
+$ docker ps
